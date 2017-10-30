@@ -1,0 +1,87 @@
+.App {
+    font-family: 'Quicksand', sans-serif;
+    color: #FFF;
+    height: 100%;
+}
+
+.App-logo {
+  font-family: 'Lobster', cursive;;
+  font-size: 1.6rem;
+  height: 60px;
+  width: 60px;
+}
+
+.App-header {
+  position: absolute;
+  top: 0;
+  left:0;
+}
+
+.App-nav{
+  position: fixed;
+  right:0;
+  top: 50%;
+  z-index: 100;
+  width: 13em;
+  transform: translateY(-50%);
+}
+
+.App-nav-item{
+  position: relative;
+  height: 3rem;
+}
+
+.App-nav-item a{
+  width: 100%;
+  display: flex;
+  color: #FFF;
+  height: 3rem;
+  font-size: 1.1rem;
+  text-decoration: none;
+  position: absolute;
+  right: -9rem;
+  align-items: center;
+  transition: right .8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.App-nav-item a:hover{
+  right:0;
+}
+
+.App-nav-item span{
+  display: inline-block;
+  padding-bottom: .3rem;
+  position: relative;  
+}
+
+.nav-item_number{
+  width: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.nav-item_number::after{
+  border-bottom: .3rem solid #CCC;
+  content: '';
+  position: absolute;
+  width:100%;
+  left:0;  
+  bottom: -.1rem;
+}
+
+.nav-item_name{
+  flex: 1;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.nav-item_name::after{
+  position: absolute;
+  width:100%;
+  left: 0;
+  bottom: 0;
+  content: '';
+  border-bottom: .1rem solid #CCC;
+}
