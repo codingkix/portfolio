@@ -1,0 +1,17 @@
+.Header{
+  position: fixed;
+  top: 4rem;
+  left:-4rem;
+  transition: left .3s ease-in-out;
+}
+
+.Header.show-logo{
+  left:0;
+}
+
+.Header-logo {
+  font-family: 'Lobster', cursive;;
+  font-size: 1.6rem;
+  height: 4rem;
+  width: 4rem;
+}

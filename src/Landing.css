@@ -1,14 +1,14 @@
 .Landing::before{
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -4px;
+  left: -4px;
+  bottom: -4px;
+  right: -4px; 
   content: '';
   background-image: url('./images/landing.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 100%;
-  width: 100%;
   z-index: -1;
   filter: blur(2px) brightness(0.55) grayscale(50%)
 }
@@ -23,19 +23,53 @@
 
 .Landing-title-section{
   flex: 1;
-  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .Landing-title {
-  font-size: 5rem;
-  font-family: 'Lobster', cursive;;
+  font-size: 6rem;
+  font-family: 'Lobster', cursive;
+  letter-spacing: .3rem;
+  margin-left: calc(-50vw - 25rem);
+  animation: slide-in 1.5s 7s 1 cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
 .Landing-subtitle{
-  font-size: 2rem;  
+  font-size: 2.5rem;  
+  letter-spacing: .12em;
+}
+
+.Landing-subtitle span{
+  display: inline-block;
+  overflow: hidden;  
+  white-space: nowrap;  
+}
+
+.Landing-subtitle:nth-child(1){
+  width: 267px;
+}
+
+.Landing-subtitle:nth-child(2){
+  width: 764px;
+}
+
+.Landing-subtitle_line1{
+  border-right: .08em solid #CCC;    
+  animation: 
+    typing 2s steps(20,end),
+    blink-caret .5s step-end infinite forwards,
+    hide-cursor 0s 2s 1 forwards
+}
+
+.Landing-subtitle_line2{
+  width: 0;
+  border-right: .08em solid transparent;
+  animation: 
+    typing 5s 2s steps(40, end) forwards,
+    blink-caret .5s 2s step-end infinite,
+    hide-cursor 0s 7s 1 forwards
 }
 
 .Landing-check-section{
@@ -74,16 +108,38 @@
   width: .3rem;
   height: 1.5rem;
   position: absolute;
-  background-color: #EEF;
+  background-color: #FFF;
   top:0;
-  animation: scroll-down 4s 2s cubic-bezier(0.215, 0.610, 0.355, 1) infinite;
+  animation: scroll-down 3s 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
 }
 
 @keyframes scroll-down{
   0% {
-    top: 0
+    top: 0;
+    z-index: 0;
   }
-  50%, 100%{
-    top: 5rem
+  100%{
+    top: 5rem;
+    z-index: -1;
   }
+}
+
+/* typing effect */
+@keyframes typing{
+  from {width: 0}
+  to {width: 100%}
+}
+
+@keyframes hide-cursor{
+  to {border: 0}
+}
+
+/* typewriter cursor effect */
+@keyframes blink-caret{
+  from, to {border-color: transparent}
+  50% {border-color: #ccc}
+}
+
+@keyframes slide-in{
+  to {margin-left: 0}
 }
