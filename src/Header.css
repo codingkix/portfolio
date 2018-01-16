@@ -1,17 +1,19 @@
-.Header{
+.Header {
   position: fixed;
   top: 4rem;
-  left:-4rem;
-  transition: left .3s ease-in-out;
+  left: -4rem;
+  transition: left 0.3s ease-in-out;
+  z-index: 10;
 }
 
-.Header.show-logo{
-  left:0;
+.Header.show-logo {
+  left: 0;
 }
 
 .Header-logo {
-  font-family: 'Lobster', cursive;;
+  font-family: 'Lobster', cursive;
   font-size: 1.6rem;
   height: 4rem;
   width: 4rem;
+  outline: none;
 }

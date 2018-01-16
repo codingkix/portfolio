@@ -1,0 +1,7 @@
+{
+  "prettier.ignorePath": ".gitignore",
+  "prettier.semi": false,
+  "prettier.trailingComma": "none",
+  "prettier.singleQuote": true,
+  "prettier.jsxBracketSameLine": true
+}
