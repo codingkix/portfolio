@@ -3,3 +3,11 @@
     color: #FFF;
     height: 100%;
 }
+
+.section-title{
+  display: flex;
+}
+
+.section-title h3{
+  width: 50%;
+}
