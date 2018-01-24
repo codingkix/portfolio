@@ -5,12 +5,39 @@
   background-color: #1c1c1c;
 }
 
+.About-inner{
+  position: relative;
+}
+
+.About-more{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 5rem solid #1c1c1c;
+  border-left: 5rem solid transparent;
+}
+
+.About-more .fa-chevron-circle-down{
+  color: #F27242;
+  position: absolute;
+  bottom: -75px;
+  right: 5px;
+  width: 30px;
+  height: 30px;
+}
+
 .About-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
+}
+
+.About-section-quote{
+  font-style: italic;
 }
 
 .About-section-parallax {

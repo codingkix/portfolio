@@ -13,7 +13,7 @@
     "smoothscroll-polyfill": "^0.4.0"
   },
   "devDependencies": {
-    "react-scripts": "1.0.14"
+    "react-scripts": "1.1.0"
   },
   "scripts": {
     "predeploy": "yarn run build",
