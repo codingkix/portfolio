@@ -1,21 +1,31 @@
 import React, { PureComponent } from 'react'
 import cx from 'classnames'
-
+import _ from 'lodash'
 import SectionHeader from './SectionHeader'
-import show1 from './images/show1.jpg'
-import show2 from './images/show2.jpg'
-import show3 from './images/show3.jpg'
-import show4 from './images/show4.jpg'
 import './About.css'
 
+const PHOTO_NUM = 4
+let intervalId
 class About extends PureComponent {
   state = {
-    showMore: false
+    showMore: false,
+    currentPhotoIndex: -1
   }
 
   handleAboutMoreClick = e => {
     const show = this.state.showMore
-    this.setState({ showMore: !show })
+
+    this.setState({ showMore: !show }, () => {
+      if (this.state.showMore) {
+        intervalId = setInterval(() => {
+          let index = this.state.currentPhotoIndex
+          this.setState({ currentPhotoIndex: ++index % PHOTO_NUM })
+        }, 2000)
+      } else {
+        this.setState({ currentPhotoIndex: -1 })
+        clearInterval(intervalId)
+      }
+    })
   }
 
   render() {
@@ -82,10 +92,14 @@ class About extends PureComponent {
               </p>
             </div>
             <ul className="About-more-photos">
-              <li />
-              <li />
-              <li />
-              <li />
+              {_.times(PHOTO_NUM, i => {
+                return (
+                  <li
+                    key={i}
+                    className={cx({ show: i === this.state.currentPhotoIndex })}
+                  />
+                )
+              })}
             </ul>
           </section>
         </div>
