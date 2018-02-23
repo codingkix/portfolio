@@ -34,25 +34,99 @@
   animation: blink 1.5s linear alternate infinite;
 }
 
-.About-more-container{
+.About-more-container {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   bottom: 0;
-  right:0;
+  right: 0;
   width: 3rem;
   height: 3rem;
   border-top-left-radius: 100%;
   z-index: 5;
   background-color: #212121;
-  transition-timing-function: ease-out;
+  transition-timing-function: cubic-bezier(0.34, 0.99, 0.36, 1);
   transition-property: width, height, border-top-left-radius;
   transition-duration: 1s, 1s, 1.5s;
 }
 
-.expanded{
+.expanded {
   width: 100%;
   height: 100%;
   border-top-left-radius: 0;
   opacity: 1;
+}
+
+.About-more-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  height: 70vh;
+}
+
+.About-more-text p {
+  max-width: 40vw;
+  font-size: 1.2rem;
+  overflow: hidden;
+  max-height: 0;
+  visibility: hidden;
+}
+
+.About-more-text p:nth-child(1) {
+  transition: max-height 0.5s ease-in-out 1s;
+}
+
+.About-more-text p:nth-child(2) {
+  transition: max-height 0.5s ease-in-out 1.5s;
+}
+
+.About-more-text p:nth-child(3) {
+  transition: max-height 0.5s ease-in-out 2s;
+}
+
+.About-more-text p:nth-child(4) {
+  transition: max-height 0.5s ease-in-out 2.5s;
+}
+
+.expanded .About-more-text p {
+  visibility: visible;
+  max-height: 6rem;
+}
+
+.About-more-photos {
+  flex: 1;
+  position: relative;
+  height: 70vh;
+}
+
+.About-more-photos li {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 1rem;
+  left: 3rem;
+  bottom: 1rem;
+  width: 70%;
+  filter: brightness(0.5) grayscale(100%);
+}
+
+.About-more-photos li:nth-child(1) {
+  background-image: url('./images/show1.jpg');
+}
+
+.About-more-photos li:nth-child(2) {
+  background-image: url('./images/show2.jpg');
+}
+
+.About-more-photos li:nth-child(3) {
+  background-image: url('./images/show3.jpg');
+}
+
+.About-more-photos li:nth-child(4) {
+  background-image: url('./images/show4.jpg');
 }
 
 .About-section {
