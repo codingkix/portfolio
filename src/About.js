@@ -91,16 +91,22 @@ class About extends PureComponent {
                 contact me to share your experience.
               </p>
             </div>
-            <ul className="About-more-photos">
-              {_.times(PHOTO_NUM, i => {
-                return (
-                  <li
-                    key={i}
-                    className={cx({ show: i === this.state.currentPhotoIndex })}
-                  />
-                )
-              })}
-            </ul>
+            <div className="About-more-photos-wrapper">
+              <ul className="About-more-photos">
+                {_.times(PHOTO_NUM, i => {
+                  return (
+                    <li
+                      key={i}
+                      className={cx({
+                        show: i === this.state.currentPhotoIndex,
+                        hide: i !== this.state.currentPhotoIndex
+                      })}>
+                      <div className={`mask mask${i}`} />
+                    </li>
+                  )
+                })}
+              </ul>
+            </div>
           </section>
         </div>
       </article>

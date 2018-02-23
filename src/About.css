@@ -99,15 +99,99 @@
   max-height: 6rem;
 }
 
-.About-more-photos {
+.About-more-photos-wrapper {
   flex: 3;
-  position: relative;
   height: 70vh;
   visibility: hidden;
 }
 
-.expanded .About-more-photos {
+.About-more-photos {
+  position: relative;
+  width: 70%;
+  height: 100%;
+}
+
+.expanded .About-more-photos-wrapper {
   visibility: visible;
+}
+
+.About-more-photos::after {
+  content: '';
+  background-color: #212121;
+  position: absolute;
+  height: calc(100% / 2.5);
+  width: calc(100% / 11.5);
+  z-index: 5;
+}
+
+.About-more-photos::before {
+  content: '';
+  background-color: #212121;
+  position: absolute;
+  height: calc(100% / 3.286);
+  width: calc(100% / 3.286);
+  right: 0;
+  z-index: 5;
+}
+
+.About-more-photos .mask {
+  position: absolute;
+  background-color: #1c1c1c;
+  opacity: 0.55;
+  width: 0;
+  z-index: 5;
+  transition: width 0.5s ease-in-out 1s;
+}
+
+.About-more-photos .mask0 {
+  left: 0;
+  top: calc(100% / 2.5);
+  height: calc(100% - 100%/2.5);
+}
+
+.About-more-photos .show .mask0 {
+  width: 40%;
+}
+
+.About-more-photos .mask1 {
+  left: 0;
+  top: calc(100% / 1.5);
+  height: calc(100% - 100%/1.5);
+}
+
+.About-more-photos .show .mask1 {
+  width: 100%;
+}
+
+.About-more-photos .mask2 {
+  right: 0;
+  top: calc(100% / 3.286);
+  height: calc(100% / 3.286);
+}
+
+.About-more-photos .show .mask2 {
+  width: calc(100% / 3.286);
+}
+
+.About-more-photos .mask3 {
+  left: 0;
+  top: 0;
+  height: calc(100% / 2.5);
+}
+
+.About-more-photos .show .mask3 {
+  width: 100%;
+}
+
+.About-more-photos .show {
+  z-index: 0;
+  width: 100%;
+}
+
+.About-more-photos .hide {
+  width: 0;
+  transition-delay: 1s;
+  z-index: -1;
 }
 
 .About-more-photos li {
@@ -115,16 +199,12 @@
   background-position: center;
   background-repeat: no-repeat;
   position: absolute;
-  top: 1rem;
-  left: 3rem;
-  bottom: 1rem;
+  top: 0;
+  left: 0;
+  bottom: 0;
   width: 0;
-  filter: brightness(0.5) grayscale(100%);
+  filter: brightness(0.6) grayscale(100%);
   transition: width 1s cubic-bezier(0.55, 0.33, 0.01, 1.01);
-}
-
-.About-more-photos .show {
-  width: 70%;
 }
 
 .About-more-photos li:nth-child(1) {
