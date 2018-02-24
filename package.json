@@ -8,12 +8,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "lodash": "^4.17.5",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "smoothscroll-polyfill": "^0.4.0"
   },
   "devDependencies": {
-    "react-scripts": "1.0.14"
+    "classnames": "^2.2.5",
+    "react-scripts": "1.1.0"
   },
   "scripts": {
     "predeploy": "yarn run build",

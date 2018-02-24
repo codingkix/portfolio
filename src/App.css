@@ -1,13 +1,15 @@
 .App {
-    font-family: 'Quicksand', sans-serif;
-    color: #FFF;
-    height: 100%;
+  font-family: 'Quicksand', sans-serif;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
-.section-title{
+.section-title {
   display: flex;
 }
 
-.section-title h3{
+.section-title h3 {
   width: 50%;
 }
