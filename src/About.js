@@ -13,6 +13,7 @@ class About extends PureComponent {
   }
 
   handleAboutMoreClick = e => {
+    e.preventDefault()
     const show = this.state.showMore
 
     this.setState({ showMore: !show }, () => {
@@ -26,6 +27,8 @@ class About extends PureComponent {
         clearInterval(intervalId)
       }
     })
+
+    document.getElementById('about').scrollIntoView({ behavior: 'smooth' })
   }
 
   render() {

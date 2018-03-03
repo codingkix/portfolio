@@ -1,0 +1,32 @@
+.Portfolio {
+  min-height: 100%;
+  background-color: #1c1c1c;
+}
+
+.Portfolio-list {
+  padding: 0 2.5rem;
+  margin-top: 6rem;
+  list-style: none;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.Portfolio-item {
+  display: inline-block;
+  width: calc(50% - 1.25rem);
+  margin-bottom: 2.5rem;
+}
+
+.Portfolio-item:nth-child(1) {
+  margin-top: 5rem;
+}
+
+.Portfolio-project {
+  display: block;
+  padding: 5rem 1rem;
+  cursor: pointer;
+  position: relative;
+  background-color: #222;
+}

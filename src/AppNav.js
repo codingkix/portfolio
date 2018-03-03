@@ -9,10 +9,10 @@ const onNavLinkClick = (e, name) => {
 
 const renderNavItem = (name, index) => {
   return (
-    <li className='App-nav-item'>
+    <li className="App-nav-item">
       <a href={`#${name}`} onClick={e => onNavLinkClick(e, name)}>
-        <span className='nav-item_number'>{index}</span>
-        <span className='nav-item_name'>{name}</span>
+        <span className="nav-item_number">{index}</span>
+        <span className="nav-item_name">{name}</span>
       </a>
     </li>
   )
@@ -20,11 +20,11 @@ const renderNavItem = (name, index) => {
 
 const AppNav = () => {
   return (
-    <nav className='App-nav'>
+    <nav className="App-nav">
       <ul>
         {renderNavItem('welcome', '00')}
         {renderNavItem('about', '01')}
-        {renderNavItem('portofolio', '02')}
+        {renderNavItem('portfolio', '02')}
         {renderNavItem('contact', '03')}
       </ul>
     </nav>
