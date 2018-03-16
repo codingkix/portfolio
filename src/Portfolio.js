@@ -1,6 +1,6 @@
 import React from 'react'
 import './Portfolio.css'
-import project1 from './images/coding.jpg'
+import demo from './images/demo.jpg'
 
 import SectionHeader from './SectionHeader'
 
@@ -21,7 +21,21 @@ const Portfolio = () => {
         <li className="Portfolio-item">
           <span className="Portfolio-project">
             <figure className="Portfolio-preview">
-              <img className="Portfolio-screenshot" />
+              <img className="Portfolio-screenshot" src={demo} />
+            </figure>
+            <figcaption className="Portfolio-project-info">
+              <h4 className="Portfolio-project-title">project</h4>
+              <h5 className="Portfolio-project-type">
+                <i className="fas fa-desktop" />
+                <i class="fas fa-mobile-alt" />
+              </h5>
+            </figcaption>
+          </span>
+        </li>
+        <li className="Portfolio-item">
+          <span className="Portfolio-project">
+            <figure className="Portfolio-preview">
+              <img className="Portfolio-screenshot" src={demo} />
             </figure>
             <figcaption className="Portfolio-project-info">
               <h4 className="Portfolio-project-title">project</h4>
@@ -31,7 +45,7 @@ const Portfolio = () => {
         <li className="Portfolio-item">
           <span className="Portfolio-project">
             <figure className="Portfolio-preview">
-              <img />
+              <img className="Portfolio-screenshot" src={demo} />
             </figure>
             <figcaption className="Portfolio-project-info">
               <h4 className="Portfolio-project-title">project</h4>
@@ -41,7 +55,7 @@ const Portfolio = () => {
         <li className="Portfolio-item">
           <span className="Portfolio-project">
             <figure className="Portfolio-preview">
-              <img />
+              <img className="Portfolio-screenshot" src={demo} />
             </figure>
             <figcaption className="Portfolio-project-info">
               <h4 className="Portfolio-project-title">project</h4>
