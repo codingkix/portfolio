@@ -66,21 +66,24 @@
 }
 
 .Portfolio-project {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 5rem 1rem;
   cursor: pointer;
   position: relative;
   background-color: #f3f3f3;
 }
 
-.Portfolio-project::after {
+.Portfolio-preview {
+  position: relative;
+  padding-top: 52%;
+  margin: 0;
+}
+
+.Portfolio-preview::after {
   content: '';
   position: absolute;
   top: 0;
-  left: 3%;
-  width: 94%;
+  left: 0%;
+  width: 100%;
   height: 100%;
   background-image: url('./images/mac.png');
   background-size: contain;
@@ -89,17 +92,19 @@
   opacity: 0.25;
 }
 
-.Portfolio-preview {
-  text-align: center;
-}
-
 .Portfolio-screenshot {
-  width: 80%;
+  position: absolute;
+  top: 7.5%;
+  left: 13%;
+  bottom: 0;
+  width: 74%;
+  backface-visibility: hidden;
+  z-index: 1;
 }
 
 .Portfolio-project-info {
   position: absolute;
-  top: calc(100% - 2rem);
+  top: calc(100% + 3rem);
   text-transform: capitalize;
   left: 1rem;
   color: #000;
@@ -113,4 +118,9 @@
   display: flex;
   font-size: 1rem;
   color: #656a70;
+  align-items: center;
+}
+
+.Portfolio-project-type span {
+  margin: 0 1.5rem 0 0.5rem;
 }

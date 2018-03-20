@@ -3,6 +3,30 @@ import './Portfolio.css'
 import demo from './images/demo.jpg'
 
 import SectionHeader from './SectionHeader'
+import PortfolioItem from './PortfolioItem'
+
+const projects = [
+  {
+    screenshot: demo,
+    title: 'project1',
+    types: ['web', 'mobile']
+  },
+  {
+    screenshot: demo,
+    title: 'project1',
+    types: ['web', 'mobile']
+  },
+  {
+    screenshot: demo,
+    title: 'project1',
+    types: ['web', 'mobile']
+  },
+  {
+    screenshot: demo,
+    title: 'project1',
+    types: ['web', 'mobile']
+  }
+]
 
 const Portfolio = () => {
   return (
@@ -18,50 +42,9 @@ const Portfolio = () => {
         />
       </div>
       <ul className="Portfolio-list">
-        <li className="Portfolio-item">
-          <span className="Portfolio-project">
-            <figure className="Portfolio-preview">
-              <img className="Portfolio-screenshot" src={demo} />
-            </figure>
-            <figcaption className="Portfolio-project-info">
-              <h4 className="Portfolio-project-title">project</h4>
-              <h5 className="Portfolio-project-type">
-                <i className="fas fa-desktop" />
-                <i class="fas fa-mobile-alt" />
-              </h5>
-            </figcaption>
-          </span>
-        </li>
-        <li className="Portfolio-item">
-          <span className="Portfolio-project">
-            <figure className="Portfolio-preview">
-              <img className="Portfolio-screenshot" src={demo} />
-            </figure>
-            <figcaption className="Portfolio-project-info">
-              <h4 className="Portfolio-project-title">project</h4>
-            </figcaption>
-          </span>
-        </li>
-        <li className="Portfolio-item">
-          <span className="Portfolio-project">
-            <figure className="Portfolio-preview">
-              <img className="Portfolio-screenshot" src={demo} />
-            </figure>
-            <figcaption className="Portfolio-project-info">
-              <h4 className="Portfolio-project-title">project</h4>
-            </figcaption>
-          </span>
-        </li>
-        <li className="Portfolio-item">
-          <span className="Portfolio-project">
-            <figure className="Portfolio-preview">
-              <img className="Portfolio-screenshot" src={demo} />
-            </figure>
-            <figcaption className="Portfolio-project-info">
-              <h4 className="Portfolio-project-title">project</h4>
-            </figcaption>
-          </span>
-        </li>
+        {projects.map((item, index) => {
+          return <PortfolioItem item={item} key={index} />
+        })}
       </ul>
     </article>
   )
