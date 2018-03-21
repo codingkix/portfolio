@@ -5,6 +5,7 @@
   bottom: -4px;
   right: -4px;
   content: '';
+  background-color: #444;
   background-image: url('./images/landing.jpg');
   background-size: cover;
   background-repeat: no-repeat;
