@@ -208,24 +208,27 @@
   left: 0;
   bottom: 0;
   width: 0;
-  filter: brightness(0.6) grayscale(100%);
   transition: width 1s cubic-bezier(0.55, 0.33, 0.01, 1.01);
 }
 
 .About-more-photos li:nth-child(1) {
-  background-image: url('./images/show1.jpg');
+  background-image: url('./images/show1.png');
+  filter: brightness(0.8) grayscale(50%);
 }
 
 .About-more-photos li:nth-child(2) {
-  background-image: url('./images/show2.jpg');
+  background-image: url('./images/show2.png');
+  filter: brightness(0.8) grayscale(40%);
 }
 
 .About-more-photos li:nth-child(3) {
-  background-image: url('./images/show3.jpg');
+  background-image: url('./images/show3.png');
+  filter: brightness(0.8) grayscale(80%);
 }
 
 .About-more-photos li:nth-child(4) {
-  background-image: url('./images/show4.jpg');
+  background-image: url('./images/show4.png');
+  filter: brightness(0.8) grayscale(80%);
 }
 
 .About-section {

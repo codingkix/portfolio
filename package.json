@@ -1,9 +1,9 @@
 {
-  "name": "portofolio",
+  "name": "portfolio",
   "author": "codingkix",
-  "homepage": "https://codingkix.github.io/portofolio",
+  "homepage": "https://codingkix.github.io/portfolio",
   "repository": {
-    "url": "https://github.com/codingkix/portofolio.git"
+    "url": "https://github.com/codingkix/portfolio.git"
   },
   "version": "0.1.0",
   "private": true,
