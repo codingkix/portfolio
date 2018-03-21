@@ -1,13 +1,20 @@
 {
-  "main.css": "static/css/main.0b843f6f.css",
-  "main.css.map": "static/css/main.0b843f6f.css.map",
-  "main.js": "static/js/main.bbe7881c.js",
-  "main.js.map": "static/js/main.bbe7881c.js.map",
+  "main.css": "static/css/main.d62cb7bc.css",
+  "main.css.map": "static/css/main.d62cb7bc.css.map",
+  "main.js": "static/js/main.1ddc1ba2.js",
+  "main.js.map": "static/js/main.1ddc1ba2.js.map",
   "static/media/coding1.jpg": "static/media/coding1.00ebefac.jpg",
   "static/media/coding2.jpg": "static/media/coding2.67d5491d.jpg",
+  "static/media/discover.png": "static/media/discover.62c0912f.png",
+  "static/media/grooveshark.png": "static/media/grooveshark.404f99b0.png",
+  "static/media/kohls.png": "static/media/kohls.017987e3.png",
   "static/media/landing.jpg": "static/media/landing.41b330f6.jpg",
+  "static/media/redbull.png": "static/media/redbull.b8745e35.png",
+  "static/media/sa.png": "static/media/sa.224c7b37.png",
   "static/media/show1.jpg": "static/media/show1.0eb620de.jpg",
   "static/media/show2.jpg": "static/media/show2.79b5d43b.jpg",
   "static/media/show3.jpg": "static/media/show3.d86d6d43.jpg",
-  "static/media/show4.jpg": "static/media/show4.d3c19c19.jpg"
+  "static/media/show4.jpg": "static/media/show4.d3c19c19.jpg",
+  "static/media/target.png": "static/media/target.c79bfed8.png",
+  "static/media/uo.png": "static/media/uo.13881aba.png"
 }
