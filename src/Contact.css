@@ -1,5 +1,84 @@
-.Contact{
+.Contact {
   min-height: 100%;
   display: flex;
-  background-color: #222;
+  background-color: #1b1d1f;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 2.5rem;
+  color: #888;
+}
+
+.Contact-header {
+  font-size: 5rem;
+  color: #151618;
+  padding: 0 10%;
+}
+
+.Contact-line {
+  text-align: right;
+  font-size: 2.5rem;
+  margin: 3rem 5rem 5rem 15%;
+  padding: 0 10%;
+}
+
+.Contact-how {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 5%;
+}
+
+.Contact-how-block {
+  padding: 0 1.2rem;
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  min-width: 25rem;
+}
+
+.Contact-how-block > span {
+  flex-shrink: 0;
+  width: 5rem;
+  height: 0.5rem;
+  background-color: #444;
+  display: inline-block;
+  margin-top: 1rem;
+  margin-right: 1.5rem;
+}
+
+.Contact-how-block_inner {
+  flex: 1;
+}
+
+.Contact-how-block_inner h3 {
+  margin-top: 0;
+  font-size: 2rem;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.Contact-how-block_inner p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+
+.Contact-button {
+  display: inline-block;
+  border: 0.2rem solid #888;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  color: #ccc;
+  padding: 1rem 1.5rem;
+  margin-top: 1rem;
+}
+
+.Contact-button:hover {
+  color: #fff;
+  border-color: #ccc;
+}
+
+.Contact-button-text {
+  text-transform: uppercase;
 }

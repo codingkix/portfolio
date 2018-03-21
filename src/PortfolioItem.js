@@ -12,15 +12,12 @@ const renderTypes = types => {
             </React.Fragment>
           )
         }
-
-        if (type === 'mobile') {
-          return (
-            <React.Fragment key={index}>
-              <i className="fas fa-mobile-alt" />
-              <span>Mobile</span>
-            </React.Fragment>
-          )
-        }
+        return (
+          <React.Fragment key={index}>
+            <i className="fas fa-desktop" />
+            <span>Web</span>
+          </React.Fragment>
+        )
       })}
     </h5>
   )
