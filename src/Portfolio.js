@@ -1,47 +1,68 @@
 import React from 'react'
 import './Portfolio.css'
-import demo from './images/demo.jpg'
+import discover from './images/discover.png'
+import grooveshark from './images/grooveshark.png'
+import kohls from './images/kohls.png'
+import sa from './images/sa.png'
+import redbull from './images/redbull.png'
+import target from './images/target.png'
+import uo from './images/uo.png'
 
 import SectionHeader from './SectionHeader'
 import PortfolioItem from './PortfolioItem'
 
 const projects = [
   {
-    screenshot: demo,
-    title: 'project1',
+    screenshot: redbull,
+    title: 'Red Bull Mobile Collect',
     types: ['web', 'mobile']
   },
   {
-    screenshot: demo,
-    title: 'project1',
+    screenshot: discover,
+    title: 'Discover Rewards',
     types: ['web', 'mobile']
   },
   {
-    screenshot: demo,
-    title: 'project1',
+    screenshot: kohls,
+    title: "Kohl's Yes2You",
     types: ['web', 'mobile']
   },
   {
-    screenshot: demo,
-    title: 'project1',
+    screenshot: sa,
+    title: 'The League',
     types: ['web', 'mobile']
+  },
+  {
+    screenshot: target,
+    title: 'Target Pharmacy',
+    types: ['web']
+  },
+  {
+    screenshot: uo,
+    title: 'Universal Studio',
+    types: ['web']
+  },
+  {
+    screenshot: grooveshark,
+    title: 'GrooveShark Music',
+    types: ['web']
   }
 ]
 
 const Portfolio = () => {
   return (
-    <article id="portfolio" className="Portfolio">
-      <div className="Portfolio-banner">
-        <div className="banner-mask" />
-        <span className="divider" />
-        <div className="banner-mask__white" />
+    <article id='portfolio' className='Portfolio'>
+      <div className='Portfolio-banner'>
+        <div className='banner-mask' />
+        <span className='divider' />
+        <div className='banner-mask__white' />
         <SectionHeader
-          className="Portfolio-header"
-          title="portfolio"
-          label="02."
+          className='Portfolio-header'
+          title='portfolio'
+          label='02.'
         />
       </div>
-      <ul className="Portfolio-list">
+      <ul className='Portfolio-list'>
         {projects.map((item, index) => {
           return <PortfolioItem item={item} key={index} />
         })}
