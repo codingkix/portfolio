@@ -4,6 +4,10 @@
   flex-direction: column;
   background-color: #1c1c1c;
 }
+.About-header {
+  padding: 0 10%;
+  justify-content: flex-start;
+}
 
 .About-inner {
   position: relative;
