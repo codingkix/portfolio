@@ -1,57 +1,56 @@
-
-.App-nav{
+.App-nav {
   position: fixed;
-  right:0;
+  right: 0;
   top: 50%;
   z-index: 100;
   width: 13em;
   transform: translateY(-50%);
 }
 
-.App-nav-item{
+.App-nav-item {
   position: relative;
   height: 3rem;
 }
 
-.App-nav-item a{
+.App-nav-item a {
   width: 100%;
   display: flex;
-  color: #FFF;
+  color: #ccc;
   height: 3rem;
   font-size: 1.1rem;
   text-decoration: none;
   position: absolute;
   right: -9rem;
   align-items: center;
-  transition: right .8s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: right 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.App-nav-item a:hover{
-  right:0;
+.App-nav-item a:hover {
+  right: 0;
 }
 
-.App-nav-item span{
+.App-nav-item span {
   display: inline-block;
-  padding-bottom: .3rem;
-  position: relative;  
+  padding-bottom: 0.3rem;
+  position: relative;
 }
 
-.nav-item_number{
+.nav-item_number {
   width: 2.5rem;
   font-weight: 700;
   text-align: center;
 }
 
-.nav-item_number::after{
-  border-bottom: .3rem solid #CCC;
+.nav-item_number::after {
+  border-bottom: 0.3rem solid #bbb;
   content: '';
   position: absolute;
-  width:100%;
-  left:0;  
-  bottom: -.1rem;
+  width: 100%;
+  left: 0;
+  bottom: -0.1rem;
 }
 
-.nav-item_name{
+.nav-item_name {
   flex: 1;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -59,11 +58,11 @@
   text-align: center;
 }
 
-.nav-item_name::after{
+.nav-item_name::after {
   position: absolute;
-  width:100%;
+  width: 100%;
   left: 0;
   bottom: 0;
   content: '';
-  border-bottom: .1rem solid #CCC;
+  border-bottom: 0.1rem solid #ccc;
 }

@@ -18,7 +18,7 @@
   right: 0;
   width: 0;
   height: 0;
-  border-bottom: 5rem solid #eee;
+  border-bottom: 5rem solid #000;
   border-left: 5rem solid transparent;
   cursor: pointer;
   z-index: 10;
@@ -30,7 +30,7 @@
   right: 5px;
   width: 30px;
   height: 30px;
-  color: rgb(238, 93, 9);
+  color: #fff;
   animation: blink 1.5s linear alternate infinite;
 }
 
@@ -146,7 +146,7 @@
 .About-more-photos .mask0 {
   left: 0;
   top: calc(100% / 2.5);
-  height: calc(100% - 100%/2.5);
+  height: calc(100% - 100% / 2.5);
 }
 
 .About-more-photos .show .mask0 {
@@ -156,7 +156,7 @@
 .About-more-photos .mask1 {
   left: 0;
   top: calc(100% / 1.5);
-  height: calc(100% - 100%/1.5);
+  height: calc(100% - 100% / 1.5);
 }
 
 .About-more-photos .show .mask1 {
@@ -241,6 +241,7 @@
   font-style: italic;
   margin: 0;
   flex: 1;
+  background-color: #212121;
 }
 
 .About-section__quote p {

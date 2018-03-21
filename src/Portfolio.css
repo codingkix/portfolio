@@ -1,0 +1,126 @@
+.Portfolio {
+  background-color: #212121;
+}
+
+.Portfolio-banner {
+  display: flex;
+  justify-content: flex-end;
+  flex-flow: row wrap;
+  height: 6rem;
+  position: relative;
+}
+
+.banner-mask {
+  width: 50vw;
+  background-color: #212121;
+  height: 100%;
+}
+
+.banner-mask__white {
+  width: 50vw;
+  background: #fff;
+  height: 100%;
+}
+
+.divider {
+  width: 1px;
+  background-color: #000;
+  height: 16rem;
+  position: absolute;
+  bottom: -6rem;
+  left: 50vw;
+  z-index: 5;
+}
+
+.Portfolio-header {
+  width: 50vw;
+  background-color: #fff;
+  margin: 0;
+  color: #d8d8d8;
+  height: 8rem;
+  font-size: 3.5rem;
+}
+
+.Portfolio-list {
+  background: #fff;
+  padding: 8rem 2.5rem 0 2.5rem;
+  list-style: none;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.Portfolio-item {
+  display: inline-block;
+  width: calc(50% - 1.25rem);
+  margin-bottom: 2.5rem;
+}
+
+.Portfolio-item:nth-of-type(odd) {
+  margin-top: 8rem;
+}
+
+.Portfolio-item:nth-of-type(even) {
+  margin-top: 3rem;
+}
+
+.Portfolio-project {
+  padding: 5rem 1rem;
+  cursor: pointer;
+  position: relative;
+  background-color: #f3f3f3;
+}
+
+.Portfolio-preview {
+  position: relative;
+  padding-top: 52%;
+  margin: 0;
+}
+
+.Portfolio-preview::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-image: url('./images/mac.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.25;
+}
+
+.Portfolio-screenshot {
+  position: absolute;
+  top: 7.5%;
+  left: 13%;
+  bottom: 0;
+  width: 74%;
+  backface-visibility: hidden;
+  z-index: 1;
+}
+
+.Portfolio-project-info {
+  position: absolute;
+  top: calc(100% + 3rem);
+  text-transform: capitalize;
+  left: 1rem;
+  color: #000;
+}
+
+.Portfolio-project-title {
+  font-size: 2.25rem;
+}
+
+.Portfolio-project-type {
+  display: flex;
+  font-size: 1rem;
+  color: #656a70;
+  align-items: center;
+}
+
+.Portfolio-project-type span {
+  margin: 0 1.5rem 0 0.5rem;
+}
