@@ -4,11 +4,11 @@ const renderTypes = types => {
   return (
     <h5 className="Portfolio-project-type">
       {types.map((type, index) => {
-        if (type === 'web') {
+        if (type === 'mobile') {
           return (
             <React.Fragment key={index}>
-              <i className="fas fa-desktop" />
-              <span>Web</span>
+              <i className="fas fa-mobile-alt" />
+              <span>Mobile</span>
             </React.Fragment>
           )
         }

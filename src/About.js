@@ -34,7 +34,7 @@ class About extends PureComponent {
   render() {
     return (
       <article id="about" className="About">
-        <SectionHeader title="about me" label="01." />
+        <SectionHeader title="about me" label="01." className="About-header" />
         <div className="About-inner">
           <section className="About-section parallax-1">
             <div className="About-section-parallax" />
