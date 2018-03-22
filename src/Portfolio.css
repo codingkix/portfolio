@@ -42,7 +42,7 @@
 
 .Portfolio-list {
   background: #fff;
-  padding: 8rem 2.5rem 0 2.5rem;
+  padding: 8rem 2.5rem 8rem 2.5rem;
   list-style: none;
   display: flex;
   align-items: flex-start;
@@ -70,6 +70,7 @@
   cursor: pointer;
   position: relative;
   background-color: #f3f3f3;
+  transition: background-color 0.4s linear;
 }
 
 .Portfolio-preview {

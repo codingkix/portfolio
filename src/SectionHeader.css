@@ -1,13 +1,12 @@
 .SectionHeader {
   font-family: 'Playfair Display', serif;
-  font-size: 3rem;
+  font-size: 4rem;
   color: #ffffff;
   text-transform: uppercase;
   margin: 1rem 0;
   letter-spacing: 0.4rem;
   display: flex;
   align-items: center;
-  justify-content: center;
   min-height: 6rem;
 }
 
