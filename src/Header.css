@@ -1,13 +1,14 @@
 .Header {
   position: fixed;
   top: 4rem;
-  left: -4rem;
-  transition: left 0.3s ease-in-out;
+  transform: translateX(-4rem);
+  transition: transform 0.3s ease-in-out;
+  will-change: transform;
   z-index: 10;
 }
 
 .Header.show-logo {
-  left: 0;
+  transform: translateX(0);
 }
 
 .Header-logo {
