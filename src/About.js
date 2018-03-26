@@ -25,10 +25,10 @@ class About extends PureComponent {
 
 		this.setState({ showMore: !show }, () => {
 			if (this.state.showMore) {
-				intervalId = setInterval(() => {
-					let index = this.state.currentPhotoIndex
-					this.setState({ currentPhotoIndex: ++index % PHOTO_NUM })
-				}, 2000)
+				// intervalId = setInterval(() => {
+				// 	let index = this.state.currentPhotoIndex
+				// 	this.setState({ currentPhotoIndex: ++index % PHOTO_NUM })
+				// }, 2000)
 			} else {
 				this.setState({ currentPhotoIndex: -1 })
 				clearInterval(intervalId)
@@ -86,6 +86,7 @@ class About extends PureComponent {
 						</div>
 						<div className="About-more-photos-wrapper">
 							<ul className="About-more-photos">
+								<div />
 								{_.times(PHOTO_NUM, (i) => {
 									return (
 										<li

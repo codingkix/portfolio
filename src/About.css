@@ -174,69 +174,6 @@
 	z-index: 5;
 }
 
-.About-more-photos .mask {
-	position: absolute;
-	background-color: #1c1c1c;
-	opacity: 0.55;
-	width: 0;
-	z-index: 5;
-	transition: width 0.5s ease-in-out 1s;
-}
-
-.About-more-photos .mask0 {
-	left: 0;
-	top: calc(100% / 2.5);
-	height: calc(100% - 100% / 2.5);
-}
-
-.About-more-photos .current .mask0 {
-	width: 40%;
-}
-
-.About-more-photos .mask1 {
-	left: 0;
-	top: calc(100% / 1.5);
-	height: calc(100% - 100% / 1.5);
-}
-
-.About-more-photos .current .mask1 {
-	width: 100%;
-}
-
-.About-more-photos .mask2 {
-	right: 0;
-	top: calc(100% / 3.286);
-	height: calc(100% / 3.286);
-}
-
-.About-more-photos .current .mask2 {
-	width: calc(100% / 3.286);
-}
-
-.About-more-photos .mask3 {
-	left: 0;
-	top: 0;
-	height: calc(100% / 2.5);
-}
-
-.About-more-photos .current .mask3 {
-	width: 100%;
-}
-
-.About-more-photos .current {
-	transform: translateX(0);
-	z-index: 1;
-}
-
-.About-more-photos .pre {
-	transform: translateX(-100%);
-	z-index: 0;
-}
-
-.About-more-photos .after {
-	transform: translateX(100%);
-}
-
 .About-more-photos li {
 	background-size: cover;
 	background-position: center;
@@ -266,6 +203,65 @@
 .About-more-photos li:nth-child(4) {
 	background-image: url("./images/show4.png");
 	filter: brightness(0.8) grayscale(80%);
+}
+
+.About-more-photos .current {
+	transform: translateX(0);
+	z-index: 1;
+}
+
+.About-more-photos .pre {
+	transform: translateX(-100%);
+	z-index: 0;
+}
+
+.About-more-photos .after {
+	transform: translateX(100%);
+}
+
+.About-more-photos .mask {
+	position: absolute;
+	background-color: #1c1c1c;
+	opacity: 0.55;
+	z-index: 5;
+	transition: transform 0.5s ease-in-out 1s;
+	will-change: transform;
+}
+
+.About-more-photos .current .mask {
+	transform: translateX(0);
+}
+
+.About-more-photos .mask0 {
+	left: 0;
+	top: calc(100% / 2.5);
+	height: calc(100% - 100% / 2.5);
+	width: 40%;
+	transform: translateX(-100%);
+}
+
+.About-more-photos .mask1 {
+	left: 0;
+	top: calc(100% / 1.5);
+	height: calc(100% - 100% / 1.5);
+	width: 100%;
+	transform: translateX(-100%);
+}
+
+.About-more-photos .mask2 {
+	right: 0;
+	top: calc(100% / 3.286);
+	height: calc(100% / 3.286);
+	width: calc(100% / 3.286);
+	transform: translateX(100%);
+}
+
+.About-more-photos .mask3 {
+	left: 0;
+	top: 0;
+	height: calc(100% / 2.5);
+	width: 100%;
+	transform: translateX(-100%);
 }
 
 .About-section {
