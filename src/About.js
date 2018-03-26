@@ -1,17 +1,25 @@
 import React, { PureComponent } from "react"
 import cx from "classnames"
 import _ from "lodash"
+import "./SectionHeader.css"
 import "./About.css"
 
 const PHOTO_NUM = 4
 let intervalId
+
+const MORE_TEXT = [
+	"Besides implementing applications with beautiful code, I love cooking delicious dishes.",
+	"Same as my pursue the pixel perfect UI design, I have put much hearts into the elegant dish presentations.",
+	"In order to enjoy food without any guilty, I work out a lot. Having conquered Marathon runs strengthen not only my body but also mind.",
+	"To me, cooking and running are more like meditation. If you are fond of any of this, please share your experience with me.",
+]
 class About extends PureComponent {
 	state = {
 		showMore: false,
 		currentPhotoIndex: -1,
 	}
 
-	handleAboutMoreClick = e => {
+	handleAboutMoreClick = (e) => {
 		e.preventDefault()
 		const show = this.state.showMore
 
@@ -32,13 +40,8 @@ class About extends PureComponent {
 
 	render() {
 		return (
-			<article id="about" className="About">
-				<h3
-					className={cx("SectionHeader", "About-header", {
-						more: this.state.showMore,
-					})}
-					onClick={this.handleAboutMoreClick}
-				>
+			<article id="about" className={cx("About", { more: this.state.showMore })}>
+				<h3 className="SectionHeader About-header" onClick={this.handleAboutMoreClick}>
 					<label>01.</label>
 					<span className="arrow arrow__left" />
 					<span className="About-header-more">more</span>
@@ -71,41 +74,28 @@ class About extends PureComponent {
 							and invoke a feeling of connectedness.
 						</p>
 					</section>
-					<div className="About-more-indicator" onClick={this.handleAboutMoreClick}>
-						<i className="fas fa-info fa-2x" />
-					</div>
-					<section
-						className={cx("About-more-container", {
-							expanded: this.state.showMore,
-						})}
-					>
+					<section className="About-more-container">
 						<div className="About-more-text">
-							<p>
-								Besides implementing applications with beautiful code, I also love cooking delicious
-								dishes.
-							</p>
-							<p>
-								Same as my pursue the pixel perfect UI design, I have put much hearts into the elegant
-								dish presentations.
-							</p>
-							<p>
-								In order to enjoy food without any guilty, I love working out a lot. Having conquered
-								several Marathon runs boost my strength not only on body but also to mind.
-							</p>
-							<p>
-								To me, cooking and running are also like meditation process after coding work. If you
-								are fond of any of this, feel free contact me to share your experience.
-							</p>
+							{MORE_TEXT.map((text, index) => {
+								return (
+									<div className="About-more-text-wrapper" key={index}>
+										<p>{text}</p>
+									</div>
+								)
+							})}
 						</div>
 						<div className="About-more-photos-wrapper">
 							<ul className="About-more-photos">
-								{_.times(PHOTO_NUM, i => {
+								{_.times(PHOTO_NUM, (i) => {
 									return (
 										<li
 											key={i}
 											className={cx({
-												show: i === this.state.currentPhotoIndex,
-												hide: i !== this.state.currentPhotoIndex,
+												current: i === this.state.currentPhotoIndex,
+												pre:
+													i !== this.state.currentPhotoIndex &&
+													i !== this.state.currentPhotoIndex - 1,
+												after: i === this.state.currentPhotoIndex - 1,
 											})}
 										>
 											<div className={`mask mask${i}`} />

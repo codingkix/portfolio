@@ -9,8 +9,8 @@
 .About-header {
 	padding: 0 10%;
 	cursor: pointer;
-	font-size: 3.5rem !important;
-	align-items: flex-end !important;
+	font-size: 3.5rem;
+	align-items: flex-end;
 }
 
 .About-header-more {
@@ -69,26 +69,13 @@
 	overflow: hidden;
 }
 
-.About-more-indicator {
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	width: 0;
-	height: 0;
-	border-bottom: 5rem solid #000;
-	border-left: 5rem solid transparent;
-	cursor: pointer;
-	z-index: 10;
+.more .parallax-1,
+.more .parallax-2 {
+	transform: translateX(calc(50vw + 50%));
 }
 
-.About-more-indicator .fa-info {
-	position: absolute;
-	bottom: -70px;
-	right: 5px;
-	width: 30px;
-	height: 30px;
-	color: #fff;
-	animation: blink 1.5s linear alternate infinite;
+.more .About-section__quote {
+	transform: translateX(calc(-50vw - 50%));
 }
 
 .About-more-container {
@@ -96,23 +83,12 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	bottom: 0;
-	right: 0;
-	width: 3rem;
-	height: 3rem;
-	border-top-left-radius: 100%;
-	z-index: 5;
-	background-color: #212121;
-	transition-timing-function: cubic-bezier(0.34, 0.99, 0.36, 1);
-	transition-property: width, height, border-top-left-radius;
-	transition-duration: 1s, 1s, 1.5s;
-}
-
-.expanded {
+	top: 0;
+	left: 0;
 	width: 100%;
 	height: 100%;
-	border-top-left-radius: 0;
-	opacity: 1;
+	z-index: -1;
+	background-color: #212121;
 }
 
 .About-more-text {
@@ -125,35 +101,41 @@
 	visibility: hidden;
 }
 
-.About-more-text p {
+.About-more-text-wrapper {
+	overflow: hidden;
+	margin: 1rem 0;
+}
+
+.About-more-text-wrapper p {
+	margin: 0;
 	max-width: 30vw;
 	font-size: 1.2rem;
-	overflow: hidden;
-	max-height: 0;
+	transform: translateY(-100%);
+	will-change: transform;
 }
 
-.About-more-text p:nth-child(1) {
-	transition: max-height 0.5s ease-in-out 1s;
+.About-more-text .About-more-text-wrapper:nth-child(1) p {
+	transition: transform 0.5s ease-in-out 1s;
 }
 
-.About-more-text p:nth-child(2) {
-	transition: max-height 0.5s ease-in-out 1.5s;
+.About-more-text .About-more-text-wrapper:nth-child(2) p {
+	transition: transform 0.5s ease-in-out 1.5s;
 }
 
-.About-more-text p:nth-child(3) {
-	transition: max-height 0.5s ease-in-out 2s;
+.About-more-text .About-more-text-wrapper:nth-child(3) p {
+	transition: transform 0.5s ease-in-out 2s;
 }
 
-.About-more-text p:nth-child(4) {
-	transition: max-height 0.5s ease-in-out 2.5s;
+.About-more-text .About-more-text-wrapper:nth-child(4) p {
+	transition: transform 0.5s ease-in-out 2.5s;
 }
 
-.expanded .About-more-text {
+.more .About-more-text {
 	visibility: visible;
 }
 
-.expanded .About-more-text p {
-	max-height: 6rem;
+.more .About-more-text-wrapper p {
+	transform: translateY(0);
 }
 
 .About-more-photos-wrapper {
@@ -166,9 +148,10 @@
 	position: relative;
 	width: 70%;
 	height: 100%;
+	overflow: hidden;
 }
 
-.expanded .About-more-photos-wrapper {
+.more .About-more-photos-wrapper {
 	visibility: visible;
 }
 
@@ -206,7 +189,7 @@
 	height: calc(100% - 100% / 2.5);
 }
 
-.About-more-photos .show .mask0 {
+.About-more-photos .current .mask0 {
 	width: 40%;
 }
 
@@ -216,7 +199,7 @@
 	height: calc(100% - 100% / 1.5);
 }
 
-.About-more-photos .show .mask1 {
+.About-more-photos .current .mask1 {
 	width: 100%;
 }
 
@@ -226,7 +209,7 @@
 	height: calc(100% / 3.286);
 }
 
-.About-more-photos .show .mask2 {
+.About-more-photos .current .mask2 {
 	width: calc(100% / 3.286);
 }
 
@@ -236,19 +219,22 @@
 	height: calc(100% / 2.5);
 }
 
-.About-more-photos .show .mask3 {
+.About-more-photos .current .mask3 {
 	width: 100%;
 }
 
-.About-more-photos .show {
+.About-more-photos .current {
+	transform: translateX(0);
+	z-index: 1;
+}
+
+.About-more-photos .pre {
+	transform: translateX(-100%);
 	z-index: 0;
-	width: 100%;
 }
 
-.About-more-photos .hide {
-	width: 0;
-	transition-delay: 1s;
-	z-index: -1;
+.About-more-photos .after {
+	transform: translateX(100%);
 }
 
 .About-more-photos li {
@@ -256,11 +242,10 @@
 	background-position: center;
 	background-repeat: no-repeat;
 	position: absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	width: 0;
-	transition: width 1s cubic-bezier(0.55, 0.33, 0.01, 1.01);
+	width: 100%;
+	height: 100%;
+	transition: transform 1s cubic-bezier(0.55, 0.33, 0.01, 1.01);
+	will-change: transform;
 }
 
 .About-more-photos li:nth-child(1) {
@@ -289,6 +274,9 @@
 	justify-content: center;
 	align-items: center;
 	position: relative;
+	transform: translateX(0);
+	transition: transform 0.8s ease-out;
+	will-change: transform;
 }
 
 .About-section p {
