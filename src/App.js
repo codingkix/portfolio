@@ -1,15 +1,12 @@
 import React, { Component } from "react"
 
 import "./App.css"
-
 import Header from "./Header"
 import Landing from "./Landing"
 import About from "./About"
 import Portfolio from "./Portfolio"
 import Contact from "./Contact"
 import AppNav from "./AppNav"
-
-import mail from "./images/mail.svg"
 
 class App extends Component {
 	render() {
@@ -22,7 +19,7 @@ class App extends Component {
 				<Portfolio />
 				<Contact />
 				<a className="App-email" href="mailto:junchaozhang2007@gmail.com?subject=Let%27s%20Build">
-					<i class="far fa-envelope-open fa-lg" />
+					<i className="far fa-envelope-open fa-lg" />
 				</a>
 			</main>
 		)
