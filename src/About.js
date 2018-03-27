@@ -25,10 +25,10 @@ class About extends PureComponent {
 
 		this.setState({ showMore: !show }, () => {
 			if (this.state.showMore) {
-				// intervalId = setInterval(() => {
-				// 	let index = this.state.currentPhotoIndex
-				// 	this.setState({ currentPhotoIndex: ++index % PHOTO_NUM })
-				// }, 2000)
+				intervalId = setInterval(() => {
+					let index = this.state.currentPhotoIndex
+					this.setState({ currentPhotoIndex: ++index % PHOTO_NUM })
+				}, 2000)
 			} else {
 				this.setState({ currentPhotoIndex: -1 })
 				clearInterval(intervalId)
@@ -44,7 +44,7 @@ class About extends PureComponent {
 				<h3 className="SectionHeader About-header" onClick={this.handleAboutMoreClick}>
 					<label>01.</label>
 					<span className="arrow arrow__left" />
-					<span className="About-header-more">more</span>
+					<span className="About-header-more accent">more</span>
 					<span className="About-header-me">About me</span>
 					<span className="arrow arrow__right" />
 				</h3>
@@ -86,7 +86,6 @@ class About extends PureComponent {
 						</div>
 						<div className="About-more-photos-wrapper">
 							<ul className="About-more-photos">
-								<div />
 								{_.times(PHOTO_NUM, (i) => {
 									return (
 										<li
@@ -98,9 +97,17 @@ class About extends PureComponent {
 													i !== this.state.currentPhotoIndex - 1,
 												after: i === this.state.currentPhotoIndex - 1,
 											})}
-										>
-											<div className={`mask mask${i}`} />
-										</li>
+										/>
+									)
+								})}
+								{_.times(PHOTO_NUM, (i) => {
+									return (
+										<div
+											key={i}
+											className={cx(`mask mask${i}`, {
+												mask__shown: i === this.state.currentPhotoIndex,
+											})}
+										/>
 									)
 								})}
 							</ul>

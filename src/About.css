@@ -11,10 +11,11 @@
 	cursor: pointer;
 	font-size: 3.5rem;
 	align-items: flex-end;
+	color: #ddd;
 }
 
 .About-header-more {
-	border-bottom: 1px solid;
+	border-bottom: 1px solid #ddd;
 	padding-right: 1.2rem;
 	padding-left: 2rem;
 }
@@ -107,6 +108,8 @@
 }
 
 .About-more-text-wrapper p {
+	color: #888;
+	line-height: 1.6;
 	margin: 0;
 	max-width: 30vw;
 	font-size: 1.2rem;
@@ -228,7 +231,7 @@
 	will-change: transform;
 }
 
-.About-more-photos .current .mask {
+.About-more-photos .mask.mask__shown {
 	transform: translateX(0);
 }
 

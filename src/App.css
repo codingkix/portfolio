@@ -1,20 +1,47 @@
 .App {
-  font-family: 'Quicksand', sans-serif;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
+	font-family: "Quicksand", sans-serif;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
+
+.App-email {
+	position: fixed;
+	right: 2rem;
+	top: 2rem;
+	display: block;
+	width: 2.5rem;
+	height: 2.5rem;
+	border-radius: 50%;
+	background-color: #286ffb;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	outline: none;
+	transition: transform 0.2s ease-out;
+	will-change: transform;
+	z-index: 100;
+}
+
+.App-email:hover {
+	transform: scale(1.2);
 }
 
 .section-title {
-  display: flex;
+	display: flex;
 }
 
 .section-title h3 {
-  width: 50%;
+	width: 50%;
 }
 
 h4,
 h5 {
-  margin: 0;
+	margin: 0;
+}
+
+.accent {
+	color: #286ffb;
 }

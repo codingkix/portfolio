@@ -1,154 +1,153 @@
 .Landing::before {
-  position: absolute;
-  top: -4px;
-  left: -4px;
-  bottom: -4px;
-  right: -4px;
-  content: '';
-  background-color: #444;
-  background-image: url('./images/landing.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index: -1;
-  filter: blur(2px) brightness(0.55) grayscale(50%);
+	position: absolute;
+	top: -4px;
+	left: -4px;
+	bottom: -4px;
+	right: -4px;
+	content: "";
+	background-color: #444;
+	background-image: url("./images/landing.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: -1;
+	filter: blur(2px) brightness(0.55) grayscale(50%);
 }
 
 .Landing {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: end;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: end;
 }
 
 .Landing-title-section {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .Landing-title {
-  font-size: 6rem;
-  font-family: 'Lobster', cursive;
-  letter-spacing: 0.3rem;
-  transform: translateX(calc(-50vw - 50%));
-  animation: slide-in 1.5s 8s 1 cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-  will-change: transform;
+	font-size: 6rem;
+	font-family: "Lobster", cursive;
+	letter-spacing: 0.3rem;
+	transform: translateX(calc(-50vw - 50%));
+	animation: slide-in 1.5s 8s 1 cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+	will-change: transform;
 }
 
 .Landing-subtitle {
-  font-size: 2.5rem;
-  letter-spacing: 0.12em;
+	font-size: 2.5rem;
+	letter-spacing: 0.12em;
 }
 
-.Landing-subtitle span {
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
+.Landing-subtitle p {
+	margin: 0;
+	display: inline-block;
+	overflow: hidden;
+	white-space: nowrap;
 }
 
 .Landing-subtitle:nth-child(1) {
-  width: 267px;
+	width: 267px;
 }
 
 .Landing-subtitle:nth-child(2) {
-  width: 764px;
+	width: 764px;
 }
 
 .Landing-subtitle_line1 {
-  border-right: 0.08em solid #ccc;
-  animation: typing 3s steps(20, end),
-    blink-caret 0.5s step-end infinite forwards, hide-cursor 0s 3s 1 forwards;
+	border-right: 0.08em solid #ccc;
+	animation: typing 3s steps(20, end), blink-caret 0.5s step-end infinite forwards, hide-cursor 0s 3s 1 forwards;
 }
 
 .Landing-subtitle_line2 {
-  width: 0;
-  border-right: 0.08em solid transparent;
-  animation: typing 5s 3s steps(40, end) forwards,
-    blink-caret 0.5s 3s step-end infinite, hide-cursor 0s 8s 1 forwards;
+	width: 0;
+	border-right: 0.08em solid transparent;
+	animation: typing 5s 3s steps(40, end) forwards, blink-caret 0.5s 3s step-end infinite, hide-cursor 0s 8s 1 forwards;
 }
 
 .Landing-check-section {
-  height: 8rem;
-  display: flex;
-  flex-direction: column;
+	height: 8rem;
+	display: flex;
+	flex-direction: column;
 }
 
 .Landing-check-label {
-  text-transform: uppercase;
-  cursor: pointer;
-  height: 3rem;
-  color: #ccc;
-  transition: color linear 0.2s;
+	text-transform: uppercase;
+	cursor: pointer;
+	height: 3rem;
+	color: #ccc;
+	transition: color linear 0.2s;
 }
 
 .Landing-check-label:hover {
-  color: #fff;
+	color: #fff;
 }
 
 .scroll-down-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	position: relative;
 }
 
 .scroll-down-line {
-  width: 0.1rem;
-  height: 5rem;
-  background-color: #fff;
+	width: 0.1rem;
+	height: 5rem;
+	background-color: #fff;
 }
 
 .scroll-down-marker {
-  width: 0.4rem;
-  height: 1.5rem;
-  position: absolute;
-  background-color: #fff;
-  top: 0;
-  animation: scroll-down 3s 1s cubic-bezier(0.18, 0.89, 0.71, 0.9) infinite;
+	width: 0.4rem;
+	height: 1.5rem;
+	position: absolute;
+	background-color: #fff;
+	top: 0;
+	animation: scroll-down 3s 1s cubic-bezier(0.18, 0.89, 0.71, 0.9) infinite;
 }
 
 @keyframes scroll-down {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(5rem);
-  }
+	from {
+		transform: translateY(0);
+	}
+	to {
+		transform: translateY(5rem);
+	}
 }
 
 /* typing effect */
 @keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
+	from {
+		width: 0;
+	}
+	to {
+		width: 100%;
+	}
 }
 
 @keyframes hide-cursor {
-  to {
-    border: 0;
-  }
+	to {
+		border: 0;
+	}
 }
 
 /* typewriter cursor effect */
 @keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: #ccc;
-  }
+	from,
+	to {
+		border-color: transparent;
+	}
+	50% {
+		border-color: #ccc;
+	}
 }
 
 @keyframes slide-in {
-  to {
-    transform: translateX(0);
-  }
+	to {
+		transform: translateX(0);
+	}
 }
