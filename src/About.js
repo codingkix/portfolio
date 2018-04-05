@@ -1,17 +1,17 @@
-import React, { PureComponent } from "react"
-import cx from "classnames"
-import _ from "lodash"
-import "./SectionHeader.css"
-import "./About.css"
+import React, { PureComponent } from 'react'
+import cx from 'classnames'
+import _ from 'lodash'
+import './SectionHeader.css'
+import './About.css'
 
 const PHOTO_NUM = 4
 let intervalId
 
 const MORE_TEXT = [
-	"Besides implementing applications with beautiful code, I love cooking delicious dishes.",
-	"Same as my pursue the pixel perfect UI design, I have put much hearts into the elegant dish presentations.",
-	"In order to enjoy food without any guilty, I work out a lot. Having conquered Marathon runs strengthen not only my body but also mind.",
-	"To me, cooking and running are more like meditation. If you are fond of any of this, please share your experience with me.",
+	'Besides implementing applications with beautiful code, I love cooking delicious dishes.',
+	'Same as my pursue the pixel perfect UI design, I have put much hearts into the elegant dish presentations.',
+	'In order to enjoy food without any guilty, I work out a lot. Having conquered Marathon runs strengthen not only my body but also mind.',
+	'To me, cooking and running are more like meditation. If you are fond of any of this, please share your experience with me.',
 ]
 class About extends PureComponent {
 	state = {
@@ -34,13 +34,13 @@ class About extends PureComponent {
 				clearInterval(intervalId)
 			}
 		})
-
-		document.getElementById("about").scrollIntoView({ behavior: "smooth" })
+		const { top, left } = document.getElementById('about').getBoundingClientRect()
+		window.scrollBy({ top, left, behavior: 'smooth' })
 	}
 
 	render() {
 		return (
-			<article id="about" className={cx("About", { more: this.state.showMore })}>
+			<article id="about" className={cx('About', { more: this.state.showMore })}>
 				<h3 className="SectionHeader About-header" onClick={this.handleAboutMoreClick}>
 					<label>01.</label>
 					<span className="arrow arrow__left" />
@@ -76,6 +76,10 @@ class About extends PureComponent {
 					</section>
 					<section className="About-more-container">
 						<div className="About-more-text">
+							<blockquote className="About-more-text__quote">
+								<p>“You only live once, but if you do it right, once is enough.”</p>
+								<p>-- Mae West</p>
+							</blockquote>
 							{MORE_TEXT.map((text, index) => {
 								return (
 									<div className="About-more-text-wrapper" key={index}>
