@@ -1,9 +1,13 @@
 .About {
-	min-height: 120vh;
+	min-height: 140vh;
 	display: flex;
 	flex-direction: column;
 	background-color: #1c1c1c;
 	z-index: 1;
+}
+
+.About.more {
+	min-height: 120vh;
 }
 
 .About-header {
@@ -328,7 +332,7 @@
 }
 
 .parallax-1 {
-	height: 30vh;
+	height: 40vh;
 }
 
 .parallax-1 .About-section-parallax {
@@ -336,7 +340,7 @@
 }
 
 .parallax-2 {
-	height: 50vh;
+	height: 60vh;
 }
 
 .parallax-2 .About-section-parallax {
