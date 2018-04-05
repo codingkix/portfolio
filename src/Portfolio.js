@@ -11,6 +11,8 @@ import redbull from './images/redbull.png'
 import target from './images/target.png'
 import uo from './images/uo.png'
 import dunkin from './images/dunkin.png'
+import tasty from './images/tasty.png'
+import spicy from './images/spicy.png'
 
 import SectionHeader from './SectionHeader'
 import PortfolioItem from './PortfolioItem'
@@ -63,6 +65,18 @@ const projects = [
 		title: 'GrooveShark Music',
 		types: ['web'],
 		hover: '#4E504E',
+	},
+	{
+		screenshot: tasty,
+		title: 'Tasty',
+		types: ['web', 'mobile'],
+		hover: '#F07249',
+	},
+	{
+		screenshot: spicy,
+		title: 'SpicyTaste',
+		types: ['web'],
+		hover: '#6C504A',
 	},
 ]
 
