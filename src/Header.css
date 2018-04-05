@@ -1,20 +1,26 @@
 .Header {
-  position: fixed;
-  top: 4rem;
-  transform: translateX(-4rem);
-  transition: transform 0.3s ease-in-out;
-  will-change: transform;
-  z-index: 10;
+	position: fixed;
+	top: 4rem;
+	transform: translateX(-4rem);
+	transition: transform 0.3s ease-in-out;
+	will-change: transform;
+	z-index: 10;
 }
 
 .Header.show-logo {
-  transform: translateX(0);
+	transform: translateX(0);
 }
 
 .Header-logo {
-  font-family: 'Lobster', cursive;
-  font-size: 1.6rem;
-  height: 4rem;
-  width: 4rem;
-  outline: none;
+	font-family: "Lobster", cursive;
+	font-size: 1.6rem;
+	height: 4rem;
+	width: 4rem;
+	outline: none;
+	cursor: pointer;
+	background-color: #ddd;
+}
+
+.Header-logo:hover {
+	background-color: #fff;
 }

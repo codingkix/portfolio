@@ -1,12 +1,11 @@
-import React from "react"
+import React from 'react'
 
-import "./AppNav.css"
+import './AppNav.css'
 
 const onNavLinkClick = (e, name) => {
 	e.preventDefault()
 	const { top, left } = document.getElementById(name).getBoundingClientRect()
-	console.log({ top, left })
-	window.scrollBy({ top, left, behavior: "smooth" })
+	window.scrollBy({ top, left, behavior: 'smooth' })
 }
 
 const renderNavItem = (name, index) => {
@@ -24,10 +23,10 @@ const AppNav = () => {
 	return (
 		<nav className="App-nav">
 			<ul>
-				{renderNavItem("welcome", "00")}
-				{renderNavItem("about", "01")}
-				{renderNavItem("portfolio", "02")}
-				{renderNavItem("contact", "03")}
+				{renderNavItem('welcome', '00')}
+				{renderNavItem('about', '01')}
+				{renderNavItem('portfolio', '02')}
+				{renderNavItem('contact', '03')}
 			</ul>
 		</nav>
 	)

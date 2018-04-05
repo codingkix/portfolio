@@ -1,127 +1,133 @@
 .Portfolio {
-  background-color: #212121;
+	background-color: #212121;
 }
 
 .Portfolio-banner {
-  display: flex;
-  justify-content: flex-end;
-  flex-flow: row wrap;
-  height: 6rem;
-  position: relative;
+	display: flex;
+	justify-content: flex-end;
+	height: 6rem;
+	position: relative;
+	background: #fff;
+	padding: 2rem 0;
 }
 
 .banner-mask {
-  width: 50vw;
-  background-color: #212121;
-  height: 100%;
+	width: 50vw;
+	background: #fff;
+	height: 6rem;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 5;
+	transition: transform 0.8s ease-in-out;
+	will-change: transform;
 }
 
-.banner-mask__white {
-  width: 50vw;
-  background: #fff;
-  height: 100%;
+.banner-mask.show {
+	transform: translateY(-100%);
 }
 
 .divider {
-  width: 1px;
-  background-color: #000;
-  height: 16rem;
-  position: absolute;
-  bottom: -6rem;
-  left: 50vw;
-  z-index: 5;
+	width: 1px;
+	background-color: #000;
+	height: 16rem;
+	position: absolute;
+	bottom: 0;
+	left: 50vw;
+	z-index: 15;
 }
 
 .Portfolio-header {
-  width: 50vw;
-  background-color: #fff;
-  margin: 0;
-  color: #d8d8d8;
-  height: 8rem;
+	width: 50vw;
+	background-color: #fff;
+	margin: 0;
+	color: #d8d8d8;
+	height: 8rem;
+	z-index: 10;
 }
 
 .Portfolio-list {
-  background: #fff;
-  padding: 8rem 2.5rem 8rem 2.5rem;
-  list-style: none;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
+	background: #fff;
+	padding: 2rem 2.5rem 8rem 2.5rem;
+	list-style: none;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
 }
 
 .Portfolio-item {
-  display: inline-block;
-  width: calc(50% - 1.25rem);
-  margin-bottom: 2.5rem;
-  max-width: 40rem;
+	display: inline-block;
+	width: calc(50% - 1.25rem);
+	margin-bottom: 2.5rem;
+	max-width: 40rem;
 }
 
 .Portfolio-item:nth-of-type(odd) {
-  margin-top: 8rem;
+	margin-top: 8rem;
 }
 
 .Portfolio-item:nth-of-type(even) {
-  margin-top: 3rem;
+	margin-top: 3rem;
 }
 
 .Portfolio-project {
-  padding: 5rem 1rem;
-  cursor: pointer;
-  position: relative;
-  background-color: #f3f3f3;
-  transition: background-color 0.4s linear;
+	padding: 5rem 1rem;
+	cursor: pointer;
+	position: relative;
+	background-color: #f3f3f3;
+	transition: background-color 0.4s linear;
 }
 
 .Portfolio-preview {
-  position: relative;
-  padding-top: 52%;
-  margin: 0;
+	position: relative;
+	padding-top: 52%;
+	margin: 0;
 }
 
 .Portfolio-preview::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0%;
-  width: 100%;
-  height: 100%;
-  background-image: url('./images/mac.png');
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0.25;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-image: url('./images/mac.png');
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	opacity: 0.25;
 }
 
 .Portfolio-screenshot {
-  position: absolute;
-  top: 7.5%;
-  left: 13%;
-  bottom: 0;
-  width: 74%;
-  backface-visibility: hidden;
-  z-index: 1;
+	position: absolute;
+	top: 7.5%;
+	left: 13%;
+	bottom: 0;
+	width: 74%;
+	backface-visibility: hidden;
+	z-index: 1;
 }
 
 .Portfolio-project-info {
-  position: absolute;
-  top: calc(100% + 3rem);
-  text-transform: capitalize;
-  left: 1rem;
-  color: #000;
+	position: absolute;
+	top: calc(100% + 3rem);
+	text-transform: capitalize;
+	left: 1rem;
+	color: #000;
 }
 
 .Portfolio-project-title {
-  font-size: 2.25rem;
+	font-size: 2.25rem;
 }
 
 .Portfolio-project-type {
-  display: flex;
-  font-size: 1rem;
-  color: #656a70;
-  align-items: center;
+	display: flex;
+	font-size: 1rem;
+	color: #656a70;
+	align-items: center;
 }
 
 .Portfolio-project-type span {
-  margin: 0 1.5rem 0 0.5rem;
+	margin: 0 1.5rem 0 0.5rem;
 }

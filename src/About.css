@@ -42,19 +42,16 @@
 	border-bottom: 0.6rem solid #fff;
 	border-left: 1.2rem solid transparent;
 	opacity: 0;
-	transition: opacity 0.1s ease-out 0.45s;
 }
 
 .arrow__right {
 	border-bottom: 0.6rem solid #fff;
 	border-right: 1.2rem solid transparent;
-	transform: translateX(-15rem);
-	transition: transform 0.45s ease-out 0s, opacity 0.1s ease-out 0.45s;
-	will-change: transform, opacity;
+	animation: move-right 5s cubic-bezier(0.45, 0.05, 0.9, 1) infinite;
 }
 
 .more .arrow__right {
-	transform: translateX(0);
+	animation: none;
 	opacity: 0;
 }
 
@@ -83,13 +80,13 @@
 	position: absolute;
 	display: flex;
 	justify-content: center;
-	align-items: center;
 	top: 0;
 	left: 0;
+	bottom: 0;
 	width: 100%;
-	height: 100%;
 	z-index: -1;
 	background-color: #212121;
+	padding: 2rem 0;
 }
 
 .About-more-text {
@@ -97,7 +94,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
-	height: 70vh;
+	justify-content: center;
 	padding-right: 4rem;
 	visibility: hidden;
 }
@@ -143,13 +140,14 @@
 
 .About-more-photos-wrapper {
 	flex: 3;
-	height: 70vh;
+	height: 85%;
 	visibility: hidden;
 }
 
 .About-more-photos {
 	position: relative;
 	width: 70%;
+	max-width: 33rem;
 	height: 100%;
 	overflow: hidden;
 }
@@ -159,7 +157,7 @@
 }
 
 .About-more-photos::after {
-	content: "";
+	content: '';
 	background-color: #212121;
 	position: absolute;
 	height: calc(100% / 2.5);
@@ -168,7 +166,7 @@
 }
 
 .About-more-photos::before {
-	content: "";
+	content: '';
 	background-color: #212121;
 	position: absolute;
 	height: calc(100% / 3.286);
@@ -189,22 +187,22 @@
 }
 
 .About-more-photos li:nth-child(1) {
-	background-image: url("./images/show1.png");
+	background-image: url('./images/show1.png');
 	filter: brightness(0.8) grayscale(50%);
 }
 
 .About-more-photos li:nth-child(2) {
-	background-image: url("./images/show2.png");
+	background-image: url('./images/show2.png');
 	filter: brightness(0.8) grayscale(40%);
 }
 
 .About-more-photos li:nth-child(3) {
-	background-image: url("./images/show3.png");
+	background-image: url('./images/show3.png');
 	filter: brightness(0.8) grayscale(80%);
 }
 
 .About-more-photos li:nth-child(4) {
-	background-image: url("./images/show4.png");
+	background-image: url('./images/show4.png');
 	filter: brightness(0.8) grayscale(80%);
 }
 
@@ -316,7 +314,7 @@
 }
 
 .parallax-1 .About-section-parallax {
-	background-image: url("./images/coding1.jpg");
+	background-image: url('./images/coding1.jpg');
 }
 
 .parallax-2 {
@@ -324,14 +322,15 @@
 }
 
 .parallax-2 .About-section-parallax {
-	background-image: url("./images/coding2.jpg");
+	background-image: url('./images/coding2.jpg');
 }
 
-@keyframes blink {
-	from {
-		opacity: 0.2;
+@keyframes move-right {
+	0% {
+		transform: translateX(-40rem);
 	}
-	to {
-		opacity: 1;
+	40%,
+	100% {
+		transform: translateX(-15rem);
 	}
 }
