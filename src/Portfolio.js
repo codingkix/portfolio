@@ -74,7 +74,7 @@ class Portfolio extends Component {
 	scheduleUpdate = rafSchedule(() => {
 		const { top } = document.getElementById('portfolio').getBoundingClientRect()
 
-		if (top >= 0 && top <= window.innerHeight) {
+		if (top > 0 && top < window.innerHeight) {
 			this.setState((prevState) => {
 				if (!prevState.isInView) {
 					return { isInView: true }
