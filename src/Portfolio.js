@@ -23,18 +23,21 @@ const projects = [
 		title: 'RedBull Mobile Collect',
 		types: ['web', 'mobile'],
 		hover: '#1C58A1',
+		link: 'https://www.redbullmobilecollect.pl/',
 	},
 	{
 		screenshot: discover,
 		title: 'Discover Rewards',
 		types: ['web', 'mobile'],
 		hover: '#DD7030',
+		link: 'https://www.discover.com/credit-cards/cashback-bonus/',
 	},
 	{
 		screenshot: kohls,
 		title: "Kohl's Yes2You",
 		types: ['web', 'mobile'],
 		hover: '#CC5199',
+		link: 'https://www.kohls.com/feature/rewards.jsp',
 	},
 	{
 		screenshot: sa,
@@ -47,24 +50,28 @@ const projects = [
 		title: 'DDPERKS',
 		types: ['web'],
 		hover: '#EFAE36',
+		link: 'https://www.dunkindonuts.com/en/dd-perks',
 	},
 	{
 		screenshot: target,
 		title: 'Target Pharmacy',
 		types: ['web'],
 		hover: '#E83132',
+		link: 'https://www.target.com/c/pharmacy/-/N-54y52',
 	},
 	{
 		screenshot: uo,
 		title: 'Universal Studio',
 		types: ['web'],
 		hover: '#3E92D3',
+		link: 'https://www.universalorlando.com/web/en/us/index.html',
 	},
 	{
 		screenshot: grooveshark,
 		title: 'GrooveShark Music',
 		types: ['web'],
 		hover: '#4E504E',
+		link: 'http://groovesharks.org/top/tracks',
 	},
 	{
 		screenshot: tasty,
@@ -77,6 +84,7 @@ const projects = [
 		title: 'SpicyTaste',
 		types: ['web'],
 		hover: '#6C504A',
+		link: 'https://spicytaste.herokuapp.com/',
 	},
 ]
 
